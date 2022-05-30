@@ -1,0 +1,40 @@
+.whole_dashborad{
+    border: 1px solid red;
+    width: 800px;
+    margin:100px auto;
+    height: 500px;
+    padding: 100px;
+    box-sizing: border-box;
+    
+}
+.whole_dashborad>div{
+    border: 1px solid red;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.whole_dashborad>div input,a{
+   width: 80%;
+   margin: auto;
+   height: 40px;
+   padding: 0px 30px;
+   margin: 30px 0px;
+   
+    outline: none;
+}
+.whole_dashborad>div a{
+    background-color: teal;
+    width: 150px;
+    border: none;
+    outline: none;
+     align-self: flex-end;
+     margin-right: 40px;
+     text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ }
