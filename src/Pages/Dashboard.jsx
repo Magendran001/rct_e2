@@ -9,6 +9,8 @@ import {useNavigate} from "react-router-dom"
 function Dashboard()
 {
     let {state,dispatch} = useContext(regeister);
+    let address = state.regeisterationreducer?.regeisterdata.address||"";
+    let phone = state.regeisterationreducer?.regeisterdata.phonenumber||"";
 
     let isAuth = state.Authreducer?.isAuth||false;
     
@@ -21,7 +23,7 @@ function Dashboard()
                
         console.log(state,"statessssssss");
 
-      
+       
        
  
     },[state])

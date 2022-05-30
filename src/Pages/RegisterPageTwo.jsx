@@ -13,9 +13,20 @@ function RegeisterpageTwo()
 
     let {state,dispatch} = useContext(regeister);
     let navigate = useNavigate();
+    let username = state.regeisterationreducer?.regeisterdata.username||"";
+    let email = state.regeisterationreducer?.regeisterdata.email||"";
+    console.log(username,email,"username")
+    console.log(state)
     
     useEffect(()=>{
          
+        if(username.length==0 || email.length==0)
+        {
+            alert("Enter correct username and email")
+            navigate("/register/one")  
+        }
+          
+
         console.log(state.Authreducer.isAuth,"kkkkkk")
            if(state.Authreducer.isAuth)
 
