@@ -4,15 +4,26 @@ import "./Dashboard.css";
 import {Link} from "react-router-dom";
 import { regeister } from "../Context/RegistrationContextProvider";
 import { useState,useContext } from "react";
+import {useNavigate} from "react-router-dom"
+import { useEffect } from "react";
 
 
 function RegeisterpageTwo()
 {
 
     let {state,dispatch} = useContext(regeister);
+    let navigate = useNavigate();
+    
+    useEffect(()=>{
+         
+        console.log(state.Authreducer.isAuth,"kkkkkk")
+           if(state.Authreducer.isAuth)
 
-    
-    
+           {
+               navigate("/")
+           }
+
+    },[state])
 
 
     let [obj,setobj]= useState({})
@@ -24,10 +35,19 @@ function RegeisterpageTwo()
            setobj({...obj,[name]:value})
 
     }
+    
     const Next=()=>{
 
         dispatch({type:"regeisterationtotal",payload:{...obj}})
-        console.log(state)
+        console.log(state);
+        dispatch({type:"Authcontroller",payload:true})
+        
+
+        
+
+    
+
+      
 
     }
 

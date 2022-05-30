@@ -25,8 +25,9 @@ function Regeisterpageone()
     }
     const Next=()=>{
 
-        dispatch({type:"regeisterationone",payload:{...obj}})
-        console.log(state)
+        dispatch({type:"regeisterationone",payload:{...obj}});
+       
+     
 
     }
 
